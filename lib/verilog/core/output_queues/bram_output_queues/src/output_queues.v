@@ -174,7 +174,7 @@
        .clk                  (clk),
        .reset                (reset));
 
-   fallthrough_small_fifo
+   fallthrough_small_fifo_v2
      #(.WIDTH(DATA_WIDTH+CTRL_WIDTH),
        .MAX_DEPTH_BITS(4))
    input_fifo

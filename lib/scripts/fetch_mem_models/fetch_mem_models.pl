@@ -17,7 +17,7 @@ use File::Path;
 my $workDir = 'builders/work';
 
 # Memory models
-my $ddrURL = "http://download.micron.com/downloads/models/verilog/sdram/ddr2/256Mb_ddr2.zip";
+my $ddrURL = "http://homepages.dcc.ufmg.br/~cunha/netfpga/256Mb_ddr2.zip";
 my $ddrFile = "256Mb_ddr2.zip";
 my %ddrTargets = (
 	"ddr2_parameters.vh" => "ddr2_parameters.vh",

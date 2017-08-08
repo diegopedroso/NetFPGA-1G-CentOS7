@@ -206,7 +206,7 @@ module cpu_dma_rx_queue
     * The depth of this fifo has to be the max number of pkt in the
     * rxfifo.
     */
-  fallthrough_small_fifo
+  fallthrough_small_fifo_v2
     #(.WIDTH (PKT_BYTE_CNT_WIDTH+1),
       .MAX_DEPTH_BITS (3)
    ) pkt_len_fifo (

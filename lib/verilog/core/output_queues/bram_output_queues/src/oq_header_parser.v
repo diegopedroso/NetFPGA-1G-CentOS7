@@ -71,7 +71,7 @@
 
    //----------------------- Module --------------------------
 
-   fallthrough_small_fifo #(.WIDTH(NUM_OQ_WIDTH + PKT_BYTE_CNT_WIDTH + PKT_WORD_CNT_WIDTH + NUM_OUTPUT_QUEUES))
+   fallthrough_small_fifo_v2 #(.WIDTH(NUM_OQ_WIDTH + PKT_BYTE_CNT_WIDTH + PKT_WORD_CNT_WIDTH + NUM_OUTPUT_QUEUES))
       dst_oq_fifo
         (.din ({pkt_word_len, pkt_byte_len, dst_oq_encoded, dst_oq_decoded}),     // Data in
          .wr_en (wr_en),             // Write enable
