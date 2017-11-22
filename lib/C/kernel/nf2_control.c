@@ -322,7 +322,7 @@ static int nf2c_tx(struct sk_buff *skb, struct net_device *dev)
 		nf2c_send(dev);
 
 		/* save the timestamp */
-		dev->trans_start = jiffies;
+		dev->rh_reserved_trans_start = jiffies;
 	}
 
 	/*err_unlock:*/
@@ -706,7 +706,7 @@ static void nf2c_tx_timeout(struct net_device *dev)
 	u32 enable, intmask;
 
 	printk(KERN_ALERT "nf2: Transmit timeout on %s at %lu, latency %lu\n",
-			dev->name, jiffies, jiffies - dev->trans_start);
+			dev->name, jiffies, jiffies - dev->rh_reserved_trans_start);
 
 	iface->stats.tx_errors++;
 
