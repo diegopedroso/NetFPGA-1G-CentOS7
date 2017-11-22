@@ -8,7 +8,7 @@
 DRIVER_LOCATION=/lib/modules/`uname -r`/kernel/drivers/nf2.ko
 
 # Change to the working directory
-cd $NF_ROOT/lib/C/kernel
+cd $NF_ROOT/root/netfpga/lib/C/kernel
 
 # The kernel should already be made. Only try the install if we are root
 if [ ! $UID -eq 0 ] ; then
